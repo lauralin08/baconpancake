@@ -14,15 +14,6 @@ app.set('port', (process.env.PORT || 5000));
 app.get('/', function(req, res) {
   var context = {};
   context.time = (new Date(Date.now())).toLocaleTimeString('en-US');
-  // var qParams = [];
-  // // create object array of key-value pairs
-  // for (var p in req.query) {
-  //   qParams.push({'name': p, 'value': req.query[p]});
-  // }
-  // var context = {};
-  // // put key-value pairs in dataList for home.handlebars
-  // context.dataList = qParams;
-  // context.type = 'GET';
   res.render('home', context);
 });
 
